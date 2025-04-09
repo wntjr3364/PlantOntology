@@ -21,7 +21,7 @@
 git clone https://github.com/your-username/po-classifier.git
 cd po-classifier
 pip install -r requirements.txt
-
+```
 
 ## 📦 Dependencies
 ```bash
@@ -31,6 +31,7 @@ scikit-learn>=1.0.0
 numpy
 matplotlib
 torch>=1.10.0
+```
 
 ## 🧪 Quick Start
 ```bash
@@ -51,4 +52,4 @@ results = model.predict("leaf and shoot apex")
 
 # 5. Plot training history
 model.plot_history()
-
+```
