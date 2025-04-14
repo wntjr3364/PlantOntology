@@ -48,5 +48,3 @@ Coming soon — We will provide:
 ## Installation
 
 To be updated after model packaging.
-
-## Repository Structure
