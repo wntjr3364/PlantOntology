@@ -8,10 +8,6 @@
 
 **POClassifier** is a deep learning-based classification model for automatically assigning Plant Ontology (PO) terms to unstructured metadata from next-generation sequencing (NGS) datasets. This project was developed to address the challenges of scalable and consistent annotation in plant genomics by leveraging recent advances in natural language processing (NLP), particularly transformer-based models.
 
-## Motivation
-
-The exponential growth of publicly available NGS data has made manual curation of plant-specific metadata increasingly impractical due to its limitations in scalability, reproducibility, and consistency. To support FAIR principles in plant bioinformatics, automated annotation of metadata using standardized ontology terms like PO is essential.
-
 
 ## Features
 
