@@ -1,55 +1,52 @@
 # 🌿 POClassifier
 
-**POClassifier** is a Transformer-based text classification framework tailored for multi-type classification tasks based on the [Plant Ontology (PO)](http://www.plantontology.org/). It supports type-specific label masking and offers intuitive training, evaluation, and visualization features using the Hugging Face ecosystem.
+**POClassifier: A Transformer-Based Classification Model for Automated [Plant Ontology (PO)](http://www.plantontology.org/) Annotation of NGS Metadata
 
----
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-## 🚀 Features
+## Overview
 
-- 🌱 Supports multiple PO types with individual label spaces
-- 🧠 Built on top of Hugging Face Transformers and Datasets
-- 📊 Easy evaluation with type-wise metrics and visualizations
-- 📈 Customizable training (early stopping, optimizer config, freezing layers)
-- 🔍 Supports prediction with confidence per PO type
-- 📉 Plots training history with loss and performance metrics
+**POClassifier** is a deep learning-based classification model for automatically assigning Plant Ontology (PO) terms to unstructured metadata from next-generation sequencing (NGS) datasets. This project was developed to address the challenges of scalable and consistent annotation in plant genomics by leveraging recent advances in natural language processing (NLP), particularly transformer-based models.
 
----
+## Motivation
 
-## 🛠 Installation
+The exponential growth of publicly available NGS data has made manual curation of plant-specific metadata increasingly impractical due to its limitations in scalability, reproducibility, and consistency. To support FAIR principles in plant bioinformatics, automated annotation of metadata using standardized ontology terms like PO is essential.
 
-```bash
-git clone https://github.com/your-username/po-classifier.git
-cd po-classifier
-pip install -r requirements.txt
-```
 
-## 📦 Dependencies
-```bash
-transformers>=4.30.0
-datasets>=2.13.0
-scikit-learn>=1.0.0
-numpy
-matplotlib
-torch>=1.10.0
-```
+## Features
 
-## 🧪 Quick Start
-```bash
-from po_classifier.model import POClassifier
+- ✅ Transformer-based architecture for PO term classification  
+- ✅ Trained on augmented datasets generated using large-scale generative language models (e.g., GPT)  
+- ✅ Domain-adaptive pretraining using masked language modeling (MLM) on plant-related sequencing metadata  
+- ✅ Supports both anatomical entity and developmental stage branches of the Plant Ontology  
+- ✅ Compatible with ENA (European Nucleotide Archive) NGS metadata fields
 
-# 1. Initialize with your dataset
-model = POClassifier(texts, labels, types)
 
-# 2. Load a pretrained Transformer model (e.g., BERT)
-model.set_model("bert-base-uncased")
+## Data
 
-# 3. Tokenize and train
-model.tokenize().train()
+- **Input**: NGS metadata fields (e.g., `description`, `sample_title`, `tissue_type`)  
+- **Labels**: Plant Ontology terms (anatomical entities & developmental stages)  
+- **Training Data**:  
+  - PO term definitions with GPT-based text augmentation  
+  - Real NGS metadata from ENA, curated and preprocessed
 
-# 4. Evaluate or predict
-metrics = model.evaluate()
-results = model.predict("leaf and shoot apex")
+## Model Architecture
 
-# 5. Plot training history
-model.plot_history()
-```
+- Base model: `BERT` or `BioBERT`  
+- Fine-tuned on a multilabel classification task  
+- Domain-adaptive pretraining: MLM on plant-specific metadata  
+- Evaluation metrics: Accuracy, F1-score, Precision, Recall
+
+## Usage
+
+Coming soon — We will provide:
+
+- Inference pipeline with sample metadata input  
+- Pretrained weights and tokenizer  
+- Command-line usage or notebook-based demo
+
+## Installation
+
+To be updated after model packaging.
+
+## Repository Structure
